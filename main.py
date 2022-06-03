@@ -23,7 +23,7 @@ def main():
         while not bot.is_closed():
             os.system("cls" if os.name == "nt" else "clear")
             try:
-                server = MinecraftServer.lookup(serverip1)
+                server = MinecraftServer.lookup(serverip)
                 response = server.status()
                 await bot.change_presence(
                     activity=discord.Game(name="Server is online")
